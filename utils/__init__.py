@@ -14,3 +14,4 @@ from utils.html_utils import html_to_dom, extract_title, extract_links, parse_xp
 from utils.json_utils import read_json, write_json, add_to_json, update_json, delete_from_json
 from utils.network_utils import build_url, send_request
 from utils.string_utils import replace_string
+from utils.os_utils import check_file_exists, normalize_file_path, join_file_path
