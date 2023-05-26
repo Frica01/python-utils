@@ -32,6 +32,9 @@ def write_json(data, file_path: str) -> None:
         IOError: 写入文件失败。
 
     """
+    #  检查文件名称是否合法
+    if not file_path.endswith('.json'):
+        raise IOError(f"file_path error!")
 
     # 检查数据是否可以转换为 JSON 格式
     try:
