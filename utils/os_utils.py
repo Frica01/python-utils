@@ -51,3 +51,6 @@ def join_file_path(base_path: str, file_name: str) -> Union[str, bool]:
     if not check_file_exists(base_path):
         return False
     return normalize_file_path(os.path.join(base_path, file_name))
+
+# TODO
+# 读取和写入文件、复制和移动文件、创建和删除目录
