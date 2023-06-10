@@ -6,6 +6,10 @@
 
 from typing import List
 
+from installer import install_modules
+
+install_modules(module_list=['lxml'])
+
 from lxml import etree
 
 

@@ -4,6 +4,16 @@
 # Date:         2023/4/28 14:23
 # Description:
 
+import platform
+
+# 判断当前系统平台是 Windows
+if 'Windows' == platform.system():
+    from installer import install_modules
+
+    install_modules(module_list=['pywin32'])
+else:
+    raise SystemError('Windows系统才可调用噢！')
+
 import win32gui
 import win32con
 
@@ -124,3 +134,4 @@ def show_window(class_name=None, title=None):
 if __name__ == '__main__':
     show_window('WeChatMainWndForPC', '微信')
     maximize_window('WeChatMainWndForPC', '微信')
+

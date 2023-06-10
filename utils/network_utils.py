@@ -4,6 +4,9 @@
 # Date:         2023/4/28 11:23
 # Description:
 
+from installer import install_modules
+
+install_modules(module_list=['requests'])
 
 import json
 import requests

@@ -8,6 +8,10 @@
 安装pandas、dict_to_excel
 """
 
+from installer import install_modules
+
+install_modules(module_list=['pandas', 'openpyxl'])
+
 import pandas as pd
 
 
