@@ -9,9 +9,90 @@
 
 
 
+## 项目组织
+
+> 目前工具库的各种工具如下所示，当然，我将继续维护和更新我的Python工具库集合，以提供更多功能和改进现有功能。
+
+
+
+工具库的功能如下所示，基本上看文件 **utils**文件的名称，就可以知道该文件有什么功能。
+
+```bash
+python-utils/
+├── utils/
+│   ├── __init__.py
+│   ├── config_utils.py
+│   ├── date_utils.py
+│   ├── docx_utils.py
+│   ├── excel_utils.py
+│   ├── file_utils.py
+│   ├── html_utils.py
+│   ├── json_utils.py
+│   ├── network_utils.py
+│   ├── os_utils.py
+│   ├── pdf_utils.py
+│   ├── photo_utils.py
+│   ├── string_utils.py
+│   ├── window_utils.py
+│   └── more_utils.py
+├── installer.py
+├── main.py
+├── LICENSE
+├── README.md
+└── requirements.txt
+```
+
+说明：
+
+- `python-utils/` 是项目的根目录。
+
+- `utils/` 是存放工具模块的目录。
+
+- `__init__.py` 是一个空文件，用于将 `utils` 目录标记为 Python 包。
+
+- 其他的 `utils` 模块文件包括了各种功能的工具函数。
+
+- `installer.py` 是自动安装模块，可以用于为工具自动安装依赖模块。
+
+- `main.py` 是项目的入口文件，可以用于演示和测试工具模块的功能。
+
+- `LICENSE` 是项目的许可证文件，用于声明代码的使用许可。
+
+- `README.md` 是项目的说明文件，可以在其中提供有关项目的详细信息、使用说明等。
+
+- `requirements.txt` 是项目的依赖文件，列出了项目所需的第三方库和版本信息。
+
+
+
+
+
+## 安装依赖
+
+这里有两种方法
+
+```bash
+pip install -r requirements.txt
+```
+
+或者
+
+```
+啥都不用做
+```
+
+
+
+因为使用了 `installer.py`，默认是会安装相关的依赖模块！
+
+
+
 
 
 ## 使用方法
+
+
+
+### 示例：获取日期范围 (date_utils.py)
 
 在 **Python** 项目中导入需要使用的模块，例如：
 
@@ -39,6 +120,27 @@ date_list = date_utils.get_date_range('2020-01-01', '2022-01-01')
     datetime.datetime(2022, 1, 1, 0, 0)
 ]
 ```
+
+
+
+### 示例：处理Excel文件 (excel_utils.py)
+
+- 传入对应的Python的dict与保存的excel文件路径，就可以保存为excel文件啦。
+
+```py
+# -*- coding: utf-8 -*-
+
+
+from utils import dict_to_excel
+
+if __name__ == '__main__':
+    dict_to_excel(
+        data_dict={'name': ['张三', '李四', '王五'], 'age': [18, 19, 20]},
+        file_path='./demo.xlsx'
+    )
+```
+
+
 
 
 
